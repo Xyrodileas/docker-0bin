@@ -4,7 +4,9 @@ FROM python:3.5-slim
 ENV ZEROBIN_VERSION 0.5
 
 ## Zerobin installation
+RUN pip install 'cherrypy<9.0.0'
 RUN pip install zerobin==${ZEROBIN_VERSION}
+
 ######
 
 # Create some folders
